@@ -1,10 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import OpenAI from 'openai';
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
-
 export async function POST(request: NextRequest) {
   try {
     const { text, targetLanguage } = await request.json();
@@ -22,6 +18,10 @@ export async function POST(request: NextRequest) {
         { status: 500 }
       );
     }
+
+    const openai = new OpenAI({
+      apiKey: process.env.OPENAI_API_KEY,
+    });
 
     // 번역 프롬프트 생성
     const prompt = `다음 텍스트를 ${targetLanguage}로 번역해주세요. 자연스럽고 정확한 번역을 제공해주세요. 번역 결과만 반환하고 다른 설명은 추가하지 마세요.
