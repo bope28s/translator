@@ -24,7 +24,7 @@ export async function POST(request: NextRequest) {
     }
 
     // 대화 기록을 OpenAI 형식으로 변환
-    const conversationHistory = messages.map((msg: any) => ({
+    const conversationHistory = messages.map((msg: { role: string; content: string }) => ({
       role: msg.role === 'assistant' ? 'assistant' : 'user',
       content: msg.content,
     }));

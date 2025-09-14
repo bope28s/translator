@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Languages, MessageCircle, ArrowLeft } from 'lucide-react';
+import { Languages, MessageCircle } from 'lucide-react';
 import TranslationPage from '@/components/TranslationPage';
 import ChatPage from '@/components/ChatPage';
 
