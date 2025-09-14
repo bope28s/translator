@@ -3,8 +3,5 @@
   "buildCommand": "npm run build",
   "devCommand": "npm run dev",
   "installCommand": "npm install",
-  "regions": ["icn1"],
-  "env": {
-    "OPENAI_API_KEY": "@openai_api_key"
-  }
+  "regions": ["icn1"]
 }
