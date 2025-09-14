@@ -42,6 +42,10 @@ export async function POST(request: NextRequest) {
           - 사용자의 질문에 대해 상세하고 도움이 되는 답변을 제공해주세요.`,
         },
         ...conversationHistory,
+        {
+          role: 'user',
+          content: message,
+        },
       ],
       max_tokens: 1000,
       temperature: 0.7,
