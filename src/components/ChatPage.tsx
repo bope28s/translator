@@ -57,7 +57,7 @@ export default function ChatPage({ onBack }: ChatPageProps) {
         },
         body: JSON.stringify({
           message: inputMessage,
-          messages: messages,
+          messages: messages.slice(1), // 초기 메시지 제외
         }),
       });
 
